@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  background: #000;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+#box {
+  width: 550px;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+#big-box {
+  position: absolute;
+  top: 400px;
+  left: 300px;
+}
+#express {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#express li {
+  list-style: none;
+  font-size: 24px;
+  height: 30px;
+  margin: 0px 5px;
+  line-height: 28px;
+  /*行与行之间的距离*/
+  letter-spacing: 2px;
+  /*字与字之间的距离*/
+  border-bottom: 1px dashed #ccc;
+  cursor: pointer;
+}
+#wrapper {
+  position: absolute;
+  left: 300px;
+  top: 20px;
+  z-index: 1;
+}
+#wrapper .wrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+#wrapper .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#wrapper img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  opacity: 0;
+  z-index: 0;
+  vertical-align: top;
+}
+#wrapper a {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  background: #000;
+  color: white;
+  font-size: 24px;
+  top: 50%;
+  margin-top: -25px;
+  display: none;
+}
+#wrapper ul {
+  position: absolute;
+  list-style: none;
+  width: 170px;
+  height: 30px;
+  left: 50%;
+  margin-left: -85px;
+  z-index: 1;
+  bottom: 30px;
+}
+#wrapper li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+#wrapper li.cur {
+  background: lime;
+}
+#wrapper .left {
+  left: 0;
+}
+#wrapper .right {
+  right: 0;
+}
