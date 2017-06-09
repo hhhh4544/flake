@@ -6,9 +6,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="demo">
-    <div id="demo1">
-        <ul id="express">
+<div class="music" id="musicBox">
+    <audio id="musicAudio" src="Various%20Artists%20-%20Lemon%20Tree.mp3
+" loop preload="none"></audio></div>
+
+
+
+<div id="wrapper">
+    <div class="wrap">
+        <div class="inner">
+            <!--<img src="" real="">
+            <img src="react.jpg" real="">
+            <img src="react.jpg" real="">
+            <img src="react.jpg" real="">-->
+        </div>
+       <!-- <ul class="focuslist">
+            &lt;!&ndash;<li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>&ndash;&gt;
+        </ul>
+        <a href="javascript:;" class="left">L</a>
+        <a href="javascript:;" class="right">R</a>-->
+    </div>
+</div>
+
+
+
+<div id="big-box">
+    <div id="box">
+        <ul id="express" >
             <li><a href="#">我希望有个如你一般的人</a></li>
             <li><a href="#">I wish there is somebody like you,</a></li>
             <li><a href="#">如山间清爽的风</a></li>
@@ -18,74 +45,12 @@
             <li><a href="#">只要最后是你就好</a></li>
             <li><a href="#">and you will be there, at last.</a></li>
         </ul>
+
     </div>
 </div>
 </body>
 </html>
 <script src="jquery-1.11.3.js"></script>
-<script>
-    var flakeColur='#fff'   //雪片的颜色
-    var newOn=200    //间隔多长时间产生雪片   值越小单位时间内产生的雪片越多
-    var flake=$('<div></div>').css("position","absolute").html("❉")
-    $(function () {//页面加载后
-        var dwidth=$(document).width()  //获取页面的宽度
-        var dheight=$(document).height() //获取页面的高度
-        setInterval(function () {
-            var starLeft=Math.random()*dwidth   //一开始距离浏览器的随机left
-            var endLeft=Math.random()*dwidth   //下落之后距离浏览器的随机left
-            var flakeSize=5+50*Math.random()  //雪片的大小区间
-            var starOpacity=0.7+0.3*Math.random()  //保证最小透明度0.7
-            var endOpacity=0.4+0.3*Math.random()  //保证最大透明度0.4
-            var durationTime=4000+7000*Math.random()//雪片下落的随机时间  速度随机
-            flake.clone().appendTo($("body")).css({//雪片一开始的状态  flake.clone()克隆一份雪片加到网页之中
-                "left":starLeft,
-                "top":"-55",
-                "color":flakeColur,
-                "font-size":flakeSize,
-                "opacity":starOpacity
-            }).animate({//动画
-                "left":endLeft,
-                "top":dheight,
-                "opacity":endOpacity
-            },durationTime,function () {
-                $(this).remove()
-            })
-        },newOn)
-    })
-    /*我希望有个如你一般的人
-     I wish there is somebody like you,
-     如山间清爽的风
-     fresh as the wind from the mountains,
-     如古城温暖的光
-     warm as the light in the old town,
-     只要最后是你就好
-     and you will be there, at last.
-     */
-
-    var demo=document.getElementById("demo");
-    demo1.style.height=demo.offsetHeight+"px";
-    //定时器，每隔50毫秒调用一次scrollup()函数，来实现文字的滚动
-    var timer=window.setInterval("scrollup()",50);
-    //定义函数
-    function scrollup()
-    {
-        //如果demo滚上去的高度大于demo的高度，重新给demo赋值从0再开始滑动
-        if(demo.scrollTop>=demo.offsetHeight)
-        {
-            demo.scrollTop=0;
-        }else
-        {
-            demo.scrollTop++;
-        }
-    }
-    //鼠标放上停止滚动，鼠标离开继续滚动
-    demo.onmouseover=function(){
-        //清除定时器
-        clearInterval(timer);
-    }
-    demo.onmouseout=function(){
-        //添加定时器
-        timer=window.setInterval("scrollup()",50);
-    }
-
-</script>
+<script src="./utils-all.js"></script>
+<script src="./运动库.js"></script>
+<script src="index.js"></script>

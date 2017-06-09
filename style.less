@@ -106,3 +106,27 @@ a{
     right: 0;
   }
 }
+
+.music{
+  position: absolute;
+  right: 30px;
+  top: 150px;
+  z-index: 100;
+  width:240px;
+  height:240px;
+  background: url("./music-sec.png" );
+  background-size: cover;
+  animation:c  2s linear infinite ;
+  z-index: -1;
+}
+
+@keyframes c{/*放大效果*/
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);/*回到初始位置*/
+  }
+}
+
