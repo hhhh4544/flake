@@ -15,7 +15,7 @@ var timer1=setInterval(function () {
 
 
 var flakeColur='#fff'   //雪片的颜色
-var newOn=200    //间隔多长时间产生雪片   值越小单位时间内产生的雪片越多
+var newOn=100    //间隔多长时间产生雪片   值越小单位时间内产生的雪片越多
 var flake=$('<div></div>').css("position","absolute").html("❉")
 $(function () {//页面加载后
     var dwidth=$(document).width()  //获取页面的宽度
